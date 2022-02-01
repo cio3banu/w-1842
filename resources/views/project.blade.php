@@ -3,7 +3,6 @@
 
 @section('content')
     
+   <h1>Pagina projects</h1>
 
-   <h1>Pagina home</h1>
-
-@endsection
+   @endsection
