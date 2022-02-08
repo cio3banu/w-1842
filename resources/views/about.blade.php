@@ -1,8 +1,6 @@
 @extends('layouts')
-
-
+@section('title','About page')
 @section('content')
-    
 
 <h1>Pagina about</h1>
 @foreach ($grupe as $grupa)
@@ -14,10 +12,6 @@
 @endif
 @endforeach
 
-
 {{$specialitate}}
 
-@endsection
-
-
-  
+@endsection  

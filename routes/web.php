@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,15 +13,22 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () { return view('welcome');});
+Route::get('/', [TestController::class,'home']);
 
 
-Route::get('/about', function () { 
-    $grupe=['W-1841','W-1842','P-1841','P-1842','P-1843','R-1841'];
-    $specialitate="Web";
-    return view('about',['grupe'=>$grupe, 'specialitate'=>$specialitate]);});
+Route::get('/about', [TestController::class,'about']);
+//Route::get('/about', 'App\Http\Controllers\TestController@about');
 
 
 
-    Route::get('/contacte', function () { return view('contacte');});
-Route::get('/project', function () { return view('project');});
+Route::get('/contacte', [TestController::class,'contacts']);
+
+Route::get('/project', [TestController::class,'projects']);
+
+Route::get('/ceva', [TestController::class,'ceva']);
+
+//Route::redirect('/', '/ceva');
+
+//Route::view('/welcome', 'altceva', ['name' => 'Ion']);
+
+Route::get('user/{id}', [TestController::class,'showuserid']);
