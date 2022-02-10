@@ -1,4 +1,5 @@
 <?php
+use App\Http\Controllers\PhotoController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,3 +33,5 @@ Route::get('/ceva', [TestController::class,'ceva']);
 //Route::view('/welcome', 'altceva', ['name' => 'Ion']);
 
 Route::get('user/{id}', [TestController::class,'showuserid']);
+
+Route::resource('photos', PhotoController::class);
