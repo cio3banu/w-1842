@@ -1,5 +1,6 @@
 <?php
 use App\Http\Controllers\PhotoController;
+use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,3 +36,5 @@ Route::get('/ceva', [TestController::class,'ceva']);
 Route::get('user/{id}', [TestController::class,'showuserid']);
 
 Route::resource('photos', PhotoController::class);
+
+Route::get('/article', [ArticleController::class,'index']);
