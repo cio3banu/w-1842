@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 class ArticleController extends Controller
 {
     public function index(){
-        $articles = DB::select('select * from articles where id = ?', [1]);
+        $articles = DB::select('select * from articles');
         //$articles=Article::all();
         //return $articles;
         return view('article')->with('articles',$articles);
