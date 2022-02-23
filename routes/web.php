@@ -36,5 +36,9 @@ Route::get('/ceva', [TestController::class,'ceva']);
 Route::get('user/{id}', [TestController::class,'showuserid']);
 
 Route::resource('photos', PhotoController::class);
-
+//Article
 Route::get('/article', [ArticleController::class,'index']);
+
+Route::get('/article/add', [ArticleController::class,'add']);
+
+Route::post('/article/add', [ArticleController::class,'store'])->name('articleStore');
